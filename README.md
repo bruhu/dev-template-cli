@@ -10,7 +10,7 @@
   - remove the logic in your main file
 
 - CLI features:
-  - `node ls templates`
+  - `node index.js ls templates`
     - prints out folder names from within `./templates`
    
    -`node create node-cli —name="my-new-cli" dest=~/Projects/cli/`

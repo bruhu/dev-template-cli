@@ -1,0 +1,23 @@
+{
+  "name": "dev-template-cli",
+  "version": "1.0.0",
+  "description": "cli template",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon -- index.js ls templates"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bruhu/dev-template-cli.git"
+  },
+  "author": "bruhu",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bruhu/dev-template-cli/issues"
+  },
+  "homepage": "https://github.com/bruhu/dev-template-cli#readme",
+  "devDependencies": {
+    "nodemon": "^1.19.1"
+  }
+}
