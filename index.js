@@ -3,6 +3,9 @@ const path = require("path");
 const { showHelp } = require("./messaging");
 
 const args = process.argv.slice(2, process.argv.length);
+if (args.includes("--help")) {
+  showHelp();
+}
 
 console.log(__dirname);
 
