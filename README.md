@@ -24,4 +24,5 @@
 
 - **Extra:** don't copy node_modules
   - instead "spawn" a child process `npm install` and show output of this new process to your cli user
-  - Extra Extra: when npm install is finished spawn the corresponding `dev` script from this template `npm install && npm run dev` is considered as cheating :P
+  - Extra Extra: when npm install is finished spawn the corresponding `dev` script 
+    from this template `npm install && npm run dev` is considered as cheating :P
