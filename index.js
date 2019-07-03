@@ -1,5 +1,6 @@
 //these are the module imports, this comment makes us VERY happy :D
 const path = require("path");
+const { showHelp } = require("./messaging");
 
 const args = process.argv.slice(2, process.argv.length);
 
