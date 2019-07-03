@@ -12,15 +12,15 @@
 - CLI features:
   - `node index.js ls templates`
     - prints out folder names from within `./templates`
-   
-   -`node create node-cli —name="my-new-cli" dest=~/Projects/cli/`
-    - creates a new folder in `~/Projects/cli/` named `my-new-cli`
-    - in new folder
-      - copies content from the corresponding template folder
-      - set `package.json` name property to value from `--name`
-      
+  
+  -  `node create node-cli —name="my-new-cli" dest=~/Projects/cli/`
+      - creates a new folder in `~/Projects/cli/` named `my-new-cli`
+      - in new folder
+        - copies content from the corresponding template folder
+        - set `package.json` name property to value from `--name`
       
 - Every CLI needs instructions aka `--help`
+
 
 - **Extra:** don't copy node_modules
   - instead "spawn" a child process `npm install` and show output of this new process to your cli user
