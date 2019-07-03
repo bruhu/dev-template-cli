@@ -7,7 +7,11 @@ if (args.includes("--help")) {
   showHelp();
 }
 
-console.log(__dirname);
+if (args.includes("ls") && args.includes("templates")) {
+  
+}
+
+//console.log(__dirname);
 
 const printFolderNames = path => {
   console.log("whatever");
