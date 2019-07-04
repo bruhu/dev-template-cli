@@ -4,39 +4,29 @@ const { showHelp } = require("./messaging");
 const { listFolderNames } = require("./listFolderNames");
 
 const args = process.argv.slice(2, process.argv.length);
+
+//shows help text if arguments include --help
 if (args.includes("--help")) {
   showHelp();
 }
 
+// if arguments contains ls and templates
+// read all folders in templates and print them out
 if (args.includes("ls") && args.includes("templates")) {
   listFolderNames();
 }
-console.log(process.argv);
-//console.log(__dirname);
+console.log(listFolderNames());
 
-// const printFolderNames = path => {
-//   console.log("whatever");
-// };
-
-// const createNewTemplate = (type, name, dest) => {
-//   console.log(type, name, dest);
-// };
-
-// if arguments contains ls and templates
-// read all folders in templates and print them out
-// if (args[0] == "ls" && args[1] == "templates") {
-//   const PATH = path.join(__dirname + "/templates");
-//   console.log(PATH);
-//   printFolderNames(PATH);
-// } else if (args[0] == "create") {
-//   //type of template
-//   const type = args[1];
-//   const name = args[2];
-//   const dest = args[3];
-//   createNewTemplate(type, name, dest);
-// } else {
-//   console.log("nope for now ;D");
-// }
+// will create a new template if arguments include create, followed by type, name and dest
+if (args[0] == "create") {
+  //type of template
+  const type = args[1];
+  const name = args[2];
+  const dest = args[3];
+  createNewTemplate(type, name, dest);
+} else {
+  console.log("nope for now ;D");
+}
 
 // create node-cli —name="my-new-cli" dest=~/Projects/cli/
 // if create and node-cli and -name and dest
