@@ -3,26 +3,25 @@ const path = require("path");
 const { showHelp } = require("./messaging");
 const { listFolderNames } = require("./listFolderNames");
 
-const args = process.argv.slice(2, process.argv.length);
+const myArgs = process.argv.slice(2, process.argv.length);
 
 //shows help text if arguments include --help
-if (args.includes("--help")) {
+if (myArgs.includes("--help")) {
   showHelp();
 }
 
 // if arguments contains ls and templates
 // read all folders in templates and print them out
-if (args.includes("ls") && args.includes("templates")) {
+if (myArgs.includes("ls") && myArgs.includes("templates")) {
   listFolderNames();
 }
-console.log(listFolderNames());
 
 // will create a new template if arguments include create, followed by type, name and dest
-if (args[0] == "create") {
+if (myArgs[0] == "create") {
   //type of template
-  const type = args[1];
-  const name = args[2];
-  const dest = args[3];
+  const type = myArgs[1];
+  const name = myArgs[2];
+  const dest = myArgs[3];
   createNewTemplate(type, name, dest);
 } else {
   console.log("nope for now ;D");
