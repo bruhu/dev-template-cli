@@ -1,7 +1,7 @@
 //these are the module imports, this comment makes us VERY happy :D
 const path = require("path");
 const { showHelp } = require("./messaging");
-const { folderList } = require("./printFolderNames");
+const { listFolderNames } = require("./listFolderNames");
 
 const args = process.argv.slice(2, process.argv.length);
 if (args.includes("--help")) {
@@ -9,9 +9,9 @@ if (args.includes("--help")) {
 }
 
 if (args.includes("ls") && args.includes("templates")) {
-  folderList();
+  listFolderNames();
 }
-
+console.log(process.argv);
 //console.log(__dirname);
 
 // const printFolderNames = path => {

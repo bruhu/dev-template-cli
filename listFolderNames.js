@@ -2,7 +2,7 @@
 
 const fs = require("fs");
 
-exports.folderList = () => {
+exports.listFolderNames = () => {
   const templatesFolder = "./templates";
   fs.readdirSync(templatesFolder).forEach(folder => {
     console.log(folder);
